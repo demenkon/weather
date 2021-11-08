@@ -1,38 +1,112 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+
+body {
+   font-family: "Open Sans", serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.wrapper {
+   height: 100vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+
+   background: rgba(226, 113, 32, 1);
+   background: -moz-linear-gradient(-45deg, rgba(226, 113, 32, 1) 0%, rgba(207, 0, 0, 1) 100%);
+   background: -webkit-gradient(
+      left top,
+      right bottom,
+      color-stop(0%, rgba(226, 113, 32, 1)),
+      color-stop(100%, rgba(207, 0, 0, 1))
+   );
+   background: -webkit-linear-gradient(-45deg, rgba(226, 113, 32, 1) 0%, rgba(207, 0, 0, 1) 100%);
+   background: -o-linear-gradient(-45deg, rgba(226, 113, 32, 1) 0%, rgba(207, 0, 0, 1) 100%);
+   background: -ms-linear-gradient(-45deg, rgba(226, 113, 32, 1) 0%, rgba(207, 0, 0, 1) 100%);
+   background: linear-gradient(135deg, rgba(226, 113, 32, 1) 0%, rgba(207, 0, 0, 1) 100%);
+   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e27120', endColorstr='#cf0000', GradientType=1 );
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.main {
+   height: 80vh;
+   background: #273648;
+   box-shadow: 0 2px 80px -20px rgba(0, 0, 0, 0.5);
+   width: 60%;
+   margin: 0 auto;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.info {
+   height: 80vh;
+   background: url("img/weather.jpg");
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: center;
+   display: flex;
+   justify-content: center;
+   text-align: center;
+   padding-top: 75px;
 }
 
-.App-link {
-  color: #61dafb;
+.info h2 {
+   font-size: 76px;
+   font-weight: 700;
+   color: #000;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.info p {
+   font-size: 22px;
+   font-weight: 700;
+   color: #000;
+}
+
+.form {
+   height: 70vh;
+   padding-top: 100px;
+   padding-left: 45px;
+}
+
+input {
+   background-color: transparent !important;
+   border: 0;
+   outline: none;
+   border-bottom: 2px solid #d24030;
+   width: 50%;
+   color: #fff;
+   margin: 0 35px 75px 0;
+   font-size: 20px;
+}
+
+input::placeholder {
+   color: #000;
+   opacity: 0.6;
+}
+
+button {
+   border: none;
+   padding: 3px 60px;
+   border-radius: 3px;
+   background-color: #d24030;
+   color: #fff;
+   transition: 0.3s linear;
+   font-size: 20px;
+}
+
+button:hover {
+   color: #000;
+}
+
+.infoWeath {
+   width: 100%;
+   font-size: 26px;
+   font-weight: 700;
+   letter-spacing: 1px;
+   color: #fff;
+}
+
+.infoWeath p {
+   padding-bottom: 20px;
+}
+
+.error {
+   font-size: 26px;
+   font-weight: 700;
+   color: #d24030;
 }
